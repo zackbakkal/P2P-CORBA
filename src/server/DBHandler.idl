@@ -1,0 +1,13 @@
+interface DBHandler 
+{
+  void addClient (in string mac, in string ipAddress, in long port);
+  boolean clientExist (in string mac);
+  void updateIPAddress (in string mac, in string ipAddress);
+  void updatePort (in string mac, in long port);
+  void shareFile (in string filename, in string fsize, in string mac);
+  void removeFile (in string filename, in string mac);
+  boolean isShared (in string filename, in string mac);
+  boolean fileExist (in string filename, in string mac);
+  string search (in string filename, in string mac);
+  string downloadFile (in string filename, in string mac);
+};
